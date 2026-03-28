@@ -25,7 +25,7 @@ class CustomSaveLatent:
 
     def save(self, samples, file_path="temp.latent", prompt=None, extra_pnginfo=None):
         if not os.path.isabs(file_path):
-            file_path = os.path.join(folder_paths.get_output_directory(), file_path)
+            file_path = os.path.join(folder_paths.get_input_directory(), file_path)
         # Ensure the directory exists
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
